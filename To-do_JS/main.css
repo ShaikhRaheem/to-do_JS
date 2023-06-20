@@ -1,0 +1,187 @@
+:root {
+    --dark: #374151;
+    --darker: #1F2937;
+    --darkest: #111827;
+    --gray: #687280;
+    --light: #EEE;
+    --pink: #EC4899;
+    --purple: #885Cf6;
+    --yellow:  #ffff33;
+    --Green: #79ff4d;
+    --Crimson: crimson;
+    --Red: red;
+    --Sky-Blue: #99ffff;
+    --Light-green: #99ff99;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Fira sans', sans-serif;
+}
+
+body {
+    
+    display: flex; 
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(210deg, orange, white, Green);
+    color: #FFF;
+}
+
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: auto;
+    margin: 0 auto;
+}
+
+header h1 {
+    background-image: linear-gradient(to right, var(--Crimson), var(--Green), var(--darkest));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    margin-top: 6rem;
+    font-family: 'Sedgwick Ave Display', cursive;
+    -webkit-box-reflect: below -25px linear-gradient(
+        transparent, rgba(0,0,0,0.2));
+        animation: animate 1s ease-in-out infinite;
+    }
+
+    @keyframes animate{
+        90%{
+            transform: translateY(0px);
+        }
+        20%{
+            transform: translateY(-20px);
+        }
+        100%{
+            transform: translateY(5px);
+        }
+    }
+    
+    new-task-form {
+        display: flex;
+    }
+    
+    input, button {
+        appearance: none;
+        border: none;
+        outline: none;
+        background: none;
+    }
+    
+#new-task-input {
+    flex: 1 1 0%;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--light);
+    font-size: 1.75rem;
+}
+
+#new-task-input::placeholder {
+    color: var(--gray);
+    width: 350px;
+}
+
+#new-task-submit {
+    color: var(--pink);
+    font-size: 1.80rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--Green), var(--Crimson));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+    font-family: 'Sedgwick Ave Display', cursive;
+}
+
+#new-task-submit:hover {
+    opacity: 0.8;
+}
+
+#new-task-submit:active {
+    opacity: 0.6;
+}
+
+main {
+    flex: 1 1 0%;
+    max-width: 800px;
+    width: 650px;
+    margin: 0 auto;
+}
+
+.task-list {
+    padding: 1rem;
+}
+
+.task-list h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--Crimson);
+    margin-bottom: 1rem;
+    
+}
+
+#tasks .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#tasks .task .content {
+   flex: 1 1 0%;
+}
+
+#tasks .task .content .text {
+    color: var(--light);
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#tasks .task .content .text:not(:read-only) {
+    color: var(--pink);
+}
+
+#tasks .task .actions {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.task .actions button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.task .actions button:hover {
+    opacity: 0.8;
+}
+
+.task .actions button:active {
+    opacity: 0.6;
+}
+
+.task .actions .edit {
+    background-image: linear-gradient(to right, var(--yellow), var(--Green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.task .actions .delete {
+    background-image: linear-gradient(to right, var(--Crimson), var(--Red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
